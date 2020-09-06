@@ -1,12 +1,29 @@
 # ESP8266-Octoprint-FastLED-Status
-WS2812b statusbar for OctoPrint via API
+English below! :)
+# A projektről
+Szerettem volna egyszerű vizuális visszajelzést kapni a nyomtató állapotáról, de minden irányba falakba ütköztem. Az SKR 1.3-on BLTouch-al együtt nem lehetett működésre bírni, ezért alaplapot cserélni SKR1.4-re nem akartam, viszont OctoPrintet használok, így adódott a lehetőség, hogy jöjjenek az adatok onnan. Ekkor találtam rá az OctoPrintAPI ESP8266 könyvtárra:
+https://github.com/chunkysteveo/OctoPrintAPI
+Az abban lévő példakódok tök jók, de egyik sem fedte le 100%-ig az igényeimet, ezért több cuccból összeollózva elkészítettem ezt.
 
-A Dirty progress bar for my Ender3.
+# Színjelzésekkel megkülönböztetett állapotok
+Mikrokontroller bootol
+WiFi-re kapcsolódás
+Nyomtató offline
+Nyomtató online
+Ágyfűtés bekapcsolva
+Hotend fűtés bekapcsolva
+Mindkét fűtés bekapcsolva
+Üzemmeleg állapot elérve
+Nyomtatás folyamatban
+Ágy visszahül
+Hotend visszahül
+
+# WS2812b statusbar for OctoPrint via API
 
 # States and colors
 Startup: Red, then Yellow, then Green
 
-Connecting to WiFi: Pink leds scrolling
+Connecting to WiFi: Purple leds scrolling
 
 Printer offline (not connected to OctoPrint, or switched off): No light
 
